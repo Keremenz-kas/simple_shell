@@ -1,8 +1,8 @@
 #include "shell.h"
 int (*get_builtin(char *command))(char **args, char **front);
 int shellby_exit(char **args, char **front);
-int shellby_cd(char **args, char _attribute((unused_)) ** front);
-int shellby_help(char **args, char _attribute((unused_)) ** front);
+int shellby_cd(char **args, char __attribute__((__unused__)) **front);
+int shellby_help(char **args, char __attribute__((__unused__)) **front);
 
 /**
  * get_builtin - Matches a command with a corresponding
@@ -87,7 +87,7 @@ int shellby_exit(char **args, char **front)
  *         If an error occurs - -1.
  *         Otherwise - 0.
  */
-int shellby_cd(char ** args, char _attribute((unused_)) ** front)
+int shellby_cd(char **args, char __attribute__((__unused__)) **front)
 {
 	char **dir_info, *new_line = "\n";
 	char *oldpwd = NULL, *pwd = NULL;
@@ -166,8 +166,8 @@ int shellby_cd(char ** args, char _attribute((unused_)) ** front)
  *
  * Return: If an error occurs - -1.
  *         Otherwise - 0.
- * /
-int shellby_help(char **args, char _attribute((unused_)) **front)
+ */
+int shellby_help(char **args, char __attribute__((__unused__)) **front)
 {
 	if (!args[0])
 		help_all();
