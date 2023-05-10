@@ -159,8 +159,7 @@ int shellby_cd(char **args, char _attribute((unused_)) **front)
 	return (0);
 }
 
-/**
- * shellby_help - Displays information about shellby builtin commands.
+/** * shellby_help - Displays information about shellby builtin commands.
  * @args: An array of arguments.
  * @front: A pointer to the beginning of args.
  *
